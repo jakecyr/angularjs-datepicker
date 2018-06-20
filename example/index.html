@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="MainApp" ng-controller="MainController as mvm">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>
+	<title></title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+	Selected Date: {{mvm.date}}
+
+	<hr>
+
+	With Default:
+
+	<date-picker default="mvm.date" on-select="mvm.date=date"></date-picker>
+
+
+	<hr>
+
+	Without Default:
+
+	<date-picker on-select="mvm.date=date"></date-picker>
+
+
+	<script src="../bin/date-picker.js"></script>
+	<script>
+		angular
+			.module('MainApp', ['datePicker.module'])
+			.controller('MainController', function(){
+				this.date = '2018-01-01';
+			})
+	</script>
+</body>
+</html>

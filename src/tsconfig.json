@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "module": "system",
+        "target": "es5",
+        "pretty": true,
+        "sourceMap": false,
+        "outFile": "../bin/date-picker.js",
+        "removeComments": true,
+        "allowUnreachableCode": false,
+        "noUnusedLocals": true,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitThis": true,
+        "noUnusedParameters": true,
+    }
+}
